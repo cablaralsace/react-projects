@@ -9,11 +9,11 @@ const ExpenseItem = (props) => {
     return ( 
         <Card>
             <div className="expense-item">
-            <ExpenseDate/>
-            <h2>Car Insurance</h2>
+            <ExpenseDate date={props.date}/>
+            <h2>{props.title}</h2>
                 <div className="expense-item-description">
                     <div className="expense-item__price">
-                    $ 100,000.00    
+                    ₱ {props.amount}    
                     </div>
                 </div> 
             </div>

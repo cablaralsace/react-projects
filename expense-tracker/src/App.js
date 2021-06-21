@@ -1,37 +1,48 @@
 import React, { useState } from "react";
 import "./App.css";
-import ExpenseItem from "./Expenses/ExpenseItem";
-import Card from "./UI/Card";
-// const DUMMY_EXPENSES = [
-//   {
-//     title: "Car Insurance",
-//     amount: "294.67",
-//     date: new Date(2020, 2, 28),
-//   },
-//   {
-//     title: "Car Insurance",
-//     amount: "294.67",
-//     date: new Date(2021, 2, 28),
-//   },
-//   {
-//     title: "Car Insurance",
-//     amount: "294.67",
-//     date: new Date(2019, 2, 28),
-//   },
-//   {
-//     title: "Car Insurance",
-//     amount: "294.67",
-//     date: new Date(2022, 11, 28),
-//   },
-// ]
+import Expenses from "./Expenses/Expenses";
+import NewExpense from "./NewExpense/NewExpense";
+
+const DUMMY_EXPENSES = [
+  {
+    title: "Car Insurance",
+    amount: "150, 000",
+    date: new Date(2020, 0, 11),
+  },
+  {
+    title: "House Insurance",
+    amount: "500, 000",
+    date: new Date(2021, 1, 12),
+  },
+  {
+    title: "Computer Insurance",
+    amount: "1,000",
+    date: new Date(2019, 2, 13),
+  },
+  {
+    title: "Phone Insurance",
+    amount: "500",
+    date: new Date(2022, 3, 14),
+  },
+]
+
 
 const App = () => {
+
+  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+  const addExpenseHandler = (expense) => {
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
+    });
+  }
+
   return (
   <div className="App">
-    <Card className="expenses">
-      <ExpenseItem/>
-      <ExpenseItem/>
-    </Card>
+    <NewExpense
+    onAddExpense = {addExpenseHandler}/>
+
+    {/* pinapasa na as property */}
+   <Expenses expenses={expenses}/> 
   </div>
   );
 };
