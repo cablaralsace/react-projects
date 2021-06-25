@@ -4,7 +4,14 @@ import { useState } from "react"
 
 const NewExpense = (props) => {
 
-    //new state for button, mainly for UI
+    // new state for button, mainly for UI
+    
+    // analogy
+    // ilaw - Expense Form
+    // switch - function setFormActive
+    // mismong act ng pagswitch ng ilaw - value isFormActive
+    // states: on and off
+
     const [isFormActive, setFormActive] = useState (false); // DEFAULT useState (false) meaning hindi kita yung form
 
     const formActiveHandler = () => { //STATE: makikita yung form
@@ -33,8 +40,8 @@ const NewExpense = (props) => {
 
             {isFormActive && //SCENARIO 2: kung active, makikita yung mismong form na may submit and cancel button, pero pagpindot ng cancel, magiging inactive ulit yung form
             <ExpenseForm
-            onSaveExpenseData={saveExpenseDataHandler}
-            onCancel={formInactiveHandler}/>}
+                onSaveExpenseData={saveExpenseDataHandler}
+                onCancel={formInactiveHandler}/>}
         </div>
     )
 }
