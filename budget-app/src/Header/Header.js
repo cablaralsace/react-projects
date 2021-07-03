@@ -1,11 +1,11 @@
 import "./Header.css"
-import icon1 from "../img/budget-app-icon.png"
+import icon1 from "../img/pink-bank.png"
 
-const Header = (props) => {
+const Header = () => {
     return (
         <div className="header">
         <img src={icon1}/>
-        <h1>GGMoney Expense Tracker</h1>
+        <h1>Budget Tracker</h1>
         </div>
     )
 }

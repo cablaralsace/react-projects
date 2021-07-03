@@ -1,0 +1,66 @@
+h1 {
+    color:#ff477e;
+}
+
+label {
+    font-size: 1em;
+    font-weight: 600;
+    color: #ff477e;
+}
+
+form {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    margin-top: 1%;
+    margin-bottom: 3%;
+
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid #ff9ebb;
+    padding: 2%;
+    width: 28vw;
+
+    text-align: left;
+    color: black;
+    font-size: 0.8em;
+}
+
+input:focus {
+        outline: none;
+}
+
+/* .form-income input:hover {
+    border-bottom: 3px solid #20bf55;
+} */
+
+.form-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    align-items: center;
+}
+.form-actions button {
+    margin: 3%;
+    background-color:white;
+    border:2px solid black;
+    box-shadow: 1px 1px 1px black;
+    
+    border-radius: 4px;
+
+    font-size: .9em; 
+    color: black;
+    cursor: pointer;
+}
+
+.form-actions button:hover {
+    border:2px solid #ff477e;
+    box-shadow: 5px 4px 5px #ff9ebb;
+    color: #ff477e;
+}

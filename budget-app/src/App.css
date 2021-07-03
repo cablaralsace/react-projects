@@ -15,9 +15,88 @@ body {
 .App {
   margin-top: 1%;
   margin-left: 1%;
-
   width: 100vw;
   height: 100vh;
-
   background-color: white;
 }
+
+.header-main-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 2%;
+}
+
+.header-container {
+  width:60%;
+  order: 1;
+}
+
+.clock-container {
+  width: 40%;
+  order: 2;
+}
+
+.app-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: baseline;
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.app-balance {
+  margin-left: -2.5%;
+  width: 15%;
+  order: 1;
+}
+
+.history-container {
+  width: 40%;
+  order: 2;
+}
+
+.history-container h1 {
+  color: #c39aff;
+}
+.form-container {
+  width: 30%;
+  order: 3;
+}
+
+/* @media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    margin: 0;
+    overflow: scroll;
+  }
+
+  .app-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
+  }
+
+  .app-balance {
+    width: 40%;
+    order: 1;
+  }
+  
+  .history-container {
+    width: 50%;
+    order: 2;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+} */
